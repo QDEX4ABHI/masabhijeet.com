@@ -3,89 +3,117 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Something big is coming — M.A.S Abhijeet</title>
-<meta name="description" content="Celebrating 4 years of M.A.S Abhijeet. A big surprise is coming. Be the first to know.">
-<meta property="og:title" content="Something big is coming — M.A.S Abhijeet">
-<meta property="og:description" content="4 years. One big surprise. Get notified the moment it drops.">
+<title>M.A.S Abhijeet · Something new on 26 November</title>
+<meta name="description" content="Four years in, M.A.S Abhijeet is sharing something new on 26 November. Leave your email to hear about it first.">
+<meta property="og:title" content="M.A.S Abhijeet · Something new on 26 November">
+<meta property="og:description" content="Four years in. Something new on 26 November. Leave your email to hear about it first.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#eef6ff;--ink:#0b2545;--mute:#4a6585;--blue:#1e88ff;--cyan:#00c2ff;--line:#cfe3fb}
+:root{
+  --sky:#DCEBFA;
+  --paper:#F4F9FF;
+  --ink:#10233F;
+  --soft:#4B6283;
+  --cobalt:#2457C5;
+  --line:#B9D0EC;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Space Grotesk',system-ui,sans-serif;background:radial-gradient(1200px 600px at 50% -10%,#d6eaff 0%,var(--bg) 60%);color:var(--ink);min-height:100vh;overflow-x:hidden}
-canvas#bg{position:fixed;inset:0;z-index:0;pointer-events:none}
-.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:28px 22px 40px;min-height:100vh;display:flex;flex-direction:column}
-nav{display:flex;justify-content:space-between;align-items:center}
-.logo{font-family:'JetBrains Mono',monospace;font-weight:600;font-size:15px}
-.logo span{color:var(--blue)}
-.live{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute);display:flex;align-items:center;gap:8px}
-.dot{width:8px;height:8px;border-radius:50%;background:#ff4d6d;animation:pulse 1.6s infinite}
-@keyframes pulse{0%{box-shadow:0 0 0 0 #ff4d6d88}70%{box-shadow:0 0 0 10px #ff4d6d00}100%{box-shadow:0 0 0 0 #ff4d6d00}}
-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 0}
-.badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--blue);box-shadow:0 8px 24px -14px #1e88ff88;animation:float 4s ease-in-out infinite}
-.four{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;font-weight:700;font-size:13px}
-@keyframes float{50%{transform:translateY(-6px)}}
-h1{font-size:clamp(40px,7.5vw,88px);line-height:1.02;letter-spacing:-2px;margin:26px 0 16px;font-weight:700}
-.grad{background:linear-gradient(90deg,var(--blue),var(--cyan),#7b61ff,var(--blue));background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
-@keyframes shine{to{background-position:300% center}}
-.sub{font-size:clamp(16px,2.2vw,20px);color:var(--mute);max-width:620px}
-.sub b{color:var(--ink)}
-.timer{display:flex;gap:clamp(10px,2.5vw,22px);margin:42px 0 12px}
-.unit{background:#ffffffd9;backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:20px;width:clamp(76px,17vw,132px);padding:18px 0 14px;box-shadow:0 20px 40px -26px #1e88ff99;position:relative;overflow:hidden}
-.unit::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,#ffffff99 50%,transparent 70%);transform:translateX(-100%);animation:sweep 3.5s infinite}
-@keyframes sweep{60%,100%{transform:translateX(100%)}}
-.num{font-family:'JetBrains Mono',monospace;font-size:clamp(34px,7vw,64px);font-weight:600;line-height:1;display:block}
-.num.tick{animation:tick .35s ease}
-@keyframes tick{0%{transform:translateY(-8px);opacity:.3}100%{transform:none;opacity:1}}
-.lbl{font-size:12px;text-transform:uppercase;letter-spacing:2px;color:var(--mute);margin-top:8px;display:block}
-.when{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--mute)}
-form{margin-top:40px;display:flex;gap:10px;width:100%;max-width:520px;background:#fff;border:1px solid var(--line);padding:8px;border-radius:16px;box-shadow:0 18px 40px -24px #1e88ff99}
-input[type=email]{flex:1;border:0;outline:0;font:inherit;font-size:16px;padding:12px 14px;background:transparent;color:var(--ink);min-width:0}
-button{border:0;cursor:pointer;font:inherit;font-weight:500;color:#fff;background:linear-gradient(135deg,var(--blue),var(--cyan));padding:12px 20px;border-radius:11px;white-space:nowrap;transition:.25s}
-button:hover{transform:translateY(-1px);box-shadow:0 10px 24px -10px #1e88ffcc}
-button:disabled{opacity:.6;cursor:wait}
-.hp{position:absolute;left:-9999px}
-.msg{margin-top:14px;font-size:15px;min-height:22px}
-.msg.ok{color:#0a9b5c}.msg.err{color:#d63a4a}
-.note{font-size:13px;color:var(--mute);margin-top:6px}
-footer{text-align:center;font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--mute)}
-footer a{color:var(--mute)}
-#confetti{position:fixed;inset:0;pointer-events:none;z-index:5}
-@media(max-width:520px){form{flex-direction:column}button{width:100%}}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Figtree',system-ui,sans-serif;
+  font-size:18px;line-height:1.6;color:var(--ink);
+  background:linear-gradient(180deg,var(--sky) 0%,var(--paper) 55%);
+  min-height:100vh;
+}
+.page{max-width:760px;margin:0 auto;padding:36px 28px 32px;min-height:100vh;display:flex;flex-direction:column}
+header{display:flex;justify-content:space-between;align-items:baseline}
+.name{font-family:'Young Serif',Georgia,serif;font-size:21px;color:var(--ink);text-decoration:none}
+.place{font-size:15px;color:var(--soft)}
+main{flex:1;padding:12vh 0 64px}
+h1{font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:clamp(42px,7vw,72px);line-height:1.08;letter-spacing:-.01em;max-width:13ch}
+.lede{margin-top:26px;max-width:34em;color:var(--soft);font-size:19px}
+.lede strong{color:var(--ink);font-weight:600}
+
+.clock{margin-top:56px;display:flex;align-items:flex-start;gap:clamp(10px,2.4vw,22px)}
+.seg{display:flex;flex-direction:column}
+.digits{font-family:'Young Serif',Georgia,serif;font-size:clamp(64px,13vw,132px);line-height:.95;font-variant-numeric:tabular-nums;color:var(--ink)}
+.cap{font-size:15px;color:var(--soft);margin-top:10px;padding-left:4px}
+.colon{font-family:'Young Serif',Georgia,serif;font-size:clamp(48px,10vw,100px);line-height:1.05;color:var(--line)}
+.days{display:none}
+.target{margin-top:22px;font-size:15px;color:var(--soft)}
+
+.signup{margin-top:64px;max-width:520px}
+.signup label{display:block;font-weight:500;margin-bottom:12px}
+.row{display:flex;border-bottom:2px solid var(--ink)}
+.row:focus-within{border-color:var(--cobalt)}
+input[type=email]{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:19px;color:var(--ink);padding:10px 2px;outline:0}
+input::placeholder{color:#8EA3C0}
+button{border:0;background:transparent;font:inherit;font-weight:600;color:var(--cobalt);padding:10px 2px 10px 16px;cursor:pointer}
+button:hover{color:var(--ink)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
+button:disabled{color:var(--soft);cursor:wait}
+.hp{position:absolute;left:-9999px;width:1px;height:1px}
+.status{min-height:26px;margin-top:12px;font-size:16px}
+.status.ok{color:#17703F}
+.status.err{color:#B4232F}
+.fine{font-size:15px;color:var(--soft)}
+
+footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--soft)}
+footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+footer a:hover{border-color:var(--ink)}
+
+.reveal{opacity:0;transform:translateY(10px);animation:in .9s ease forwards}
+.reveal.d2{animation-delay:.15s}.reveal.d3{animation-delay:.3s}
+@keyframes in{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+@media (max-width:520px){
+  body{font-size:17px}
+  .page{padding:24px 20px}
+  main{padding-top:8vh}
+  .clock{margin-top:44px}
+}
 </style>
 </head>
 <body>
-<canvas id="bg"></canvas>
-<canvas id="confetti"></canvas>
-<div class="wrap">
-  <nav>
-    <div class="logo">&lt;mas<span>.abhijeet</span>/&gt;</div>
-    <div class="live"><span class="dot"></span>COUNTDOWN LIVE</div>
-  </nav>
+<div class="page">
+  <header>
+    <a class="name" href="/">M.A.S Abhijeet</a>
+    <span class="place">Abu Dhabi</span>
+  </header>
 
   <main>
-    <div class="badge"><span class="four">4</span> Years of M.A.S Abhijeet</div>
-    <h1 id="headline">Something <span class="grad">big</span><br>is coming.</h1>
-    <p class="sub" id="sub">Four years of building, failing, learning and winning. To mark the <b>4th anniversary</b>, a big surprise is about to drop. Be the first to know.</p>
+    <h1 class="reveal" id="headline">Four years ago, I started building.</h1>
+    <p class="lede reveal d2" id="lede">To mark the fourth anniversary, I'm sharing something I've been working on quietly. It goes live on <strong>26 November</strong>. Leave your email and you'll hear about it first.</p>
 
-    <div class="timer" id="timer" aria-live="polite">
-      <div class="unit"><span class="num" id="d">00</span><span class="lbl">Days</span></div>
-      <div class="unit"><span class="num" id="h">00</span><span class="lbl">Hours</span></div>
-      <div class="unit"><span class="num" id="m">00</span><span class="lbl">Minutes</span></div>
-      <div class="unit"><span class="num" id="s">00</span><span class="lbl">Seconds</span></div>
+    <div class="clock reveal d3" role="timer" aria-live="off" aria-label="Time until the reveal">
+      <div class="seg days" id="daysSeg"><span class="digits" id="d">0</span><span class="cap">days</span></div>
+      <span class="colon days" id="daysColon">:</span>
+      <div class="seg"><span class="digits" id="h">00</span><span class="cap">hours</span></div>
+      <span class="colon">:</span>
+      <div class="seg"><span class="digits" id="m">00</span><span class="cap">minutes</span></div>
+      <span class="colon">:</span>
+      <div class="seg"><span class="digits" id="s">00</span><span class="cap">seconds</span></div>
     </div>
-    <div class="when">Reveal: 26 Nov 2026 · 5:30 PM Gulf Standard Time</div>
+    <p class="target reveal d3">Thursday, 26 November 2026, 5:30 pm Gulf time</p>
 
-    <form id="signup" novalidate>
-      <input type="email" id="email" name="email" placeholder="Enter your email" autocomplete="email" required aria-label="Email address">
-      <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-      <button type="submit" id="btn">Notify me 🔔</button>
+    <form class="signup reveal d3" id="signup" novalidate>
+      <label for="email">Get notified when it's live</label>
+      <div class="row">
+        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button type="submit" id="btn">Notify me</button>
+      </div>
+      <p class="status" id="status" role="status"></p>
+      <p class="fine">One email on launch day. Nothing else.</p>
     </form>
-    <div class="msg" id="msg"></div>
-    <div class="note">No spam. Just one email when the surprise is live.</div>
   </main>
 
-  <footer>© <span id="yr"></span> M.A.S Abhijeet · <a href="mailto:bkabhijeet@gmail.com">bkabhijeet@gmail.com</a></footer>
+  <footer>
+    <a href="mailto:info@masabhijeet.com">info@masabhijeet.com</a>
+    <span>© <span id="yr"></span> M.A.S Abhijeet</span>
+  </footer>
 </div>
 
 <script>
@@ -93,58 +121,46 @@ const SIGNUP_URL = "https://script.google.com/macros/s/AKfycbyTdgygA80SdXPjdx0D_
 const TARGET = new Date("2026-11-26T17:30:00+04:00").getTime();
 document.getElementById('yr').textContent = new Date().getFullYear();
 
-// countdown
-const els = {d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
-const pad = n => String(n).padStart(2,'0');
-let done = false;
-function set(el,v){ if(el.textContent!==v){ el.textContent=v; el.classList.remove('tick'); void el.offsetWidth; el.classList.add('tick'); } }
-function update(){
-  let diff = Math.max(0, TARGET - Date.now());
-  const d=Math.floor(diff/864e5), h=Math.floor(diff/36e5)%24, m=Math.floor(diff/6e4)%60, s=Math.floor(diff/1e3)%60;
-  set(els.d,pad(d)); set(els.h,pad(h)); set(els.m,pad(m)); set(els.s,pad(s));
-  if(diff===0 && !done){ done=true;
-    document.getElementById('headline').innerHTML='The surprise <span class="grad">is here.</span>';
-    document.getElementById('sub').innerHTML='Thank you for four incredible years. Stay tuned. The big reveal is happening now.';
-    burst();
+const $ = id => document.getElementById(id);
+const pad = n => String(n).padStart(2, '0');
+let launched = false;
+function tick(){
+  const diff = Math.max(0, TARGET - Date.now());
+  const d = Math.floor(diff/864e5), h = Math.floor(diff/36e5)%24, m = Math.floor(diff/6e4)%60, s = Math.floor(diff/1e3)%60;
+  const showDays = d > 0;
+  $('daysSeg').style.display = $('daysColon').style.display = showDays ? 'flex' : 'none';
+  $('d').textContent = d; $('h').textContent = pad(h); $('m').textContent = pad(m); $('s').textContent = pad(s);
+  if (diff === 0 && !launched) {
+    launched = true;
+    $('headline').textContent = "It's live.";
+    $('lede').textContent = "Thank you for four years of support. The announcement is out today. Leave your email and I'll send you the details.";
   }
 }
-update(); setInterval(update,1000);
+tick(); setInterval(tick, 1000);
 
-// signup
-const form=document.getElementById('signup'), msg=document.getElementById('msg'), btn=document.getElementById('btn');
-form.addEventListener('submit', async e=>{
+const form = $('signup'), status = $('status'), btn = $('btn');
+form.addEventListener('submit', async e => {
   e.preventDefault();
-  const email=document.getElementById('email').value.trim();
-  if(form.company.value){ return; }
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ msg.className='msg err'; msg.textContent='Please enter a valid email address.'; return; }
-  btn.disabled=true; btn.textContent='Saving…'; msg.textContent='';
-  try{
-    await fetch(SIGNUP_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams({email,source:'masabhijeet.com coming-soon'})});
-    msg.className='msg ok'; msg.textContent="You're on the list! 🎉 We'll email you the moment it's live.";
-    form.reset(); burst();
-  }catch(err){
-    msg.className='msg err'; msg.textContent='Something went wrong. Please try again.';
-  }finally{ btn.disabled=false; btn.textContent='Notify me 🔔'; }
+  if (form.company.value) return;
+  const email = $('email').value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    status.className = 'status err';
+    status.textContent = 'Enter a full email address, like name@example.com.';
+    return;
+  }
+  btn.disabled = true; btn.textContent = 'Saving…'; status.textContent = '';
+  try {
+    await fetch(SIGNUP_URL, {method:'POST', mode:'no-cors', body:new URLSearchParams({email, source:'masabhijeet.com coming-soon'})});
+    status.className = 'status ok';
+    status.textContent = "You're on the list. I'll email you on 26 November.";
+    form.reset();
+  } catch (err) {
+    status.className = 'status err';
+    status.textContent = "Couldn't save your email. Check your connection and try again.";
+  } finally {
+    btn.disabled = false; btn.textContent = 'Notify me';
+  }
 });
-
-// network background
-const c=document.getElementById('bg'),x=c.getContext('2d');let W,H,P=[];
-function size(){W=c.width=innerWidth;H=c.height=innerHeight;P=Array.from({length:Math.min(70,Math.floor(W*H/18000))},()=>({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.35,vy:(Math.random()-.5)*.35}))}
-size();addEventListener('resize',()=>{size();sizeC()});
-(function loop(){x.clearRect(0,0,W,H);
- for(const p of P){p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;x.fillStyle='#1e88ff55';x.beginPath();x.arc(p.x,p.y,2,0,7);x.fill()}
- for(let i=0;i<P.length;i++)for(let j=i+1;j<P.length;j++){const a=P[i],b=P[j],d=Math.hypot(a.x-b.x,a.y-b.y);if(d<140){x.strokeStyle=`rgba(30,136,255,${(1-d/140)*.18})`;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,b.y);x.stroke()}}
- requestAnimationFrame(loop)})();
-
-// confetti
-const cc=document.getElementById('confetti'),cx=cc.getContext('2d');let bits=[];
-function sizeC(){cc.width=innerWidth;cc.height=innerHeight} sizeC();
-function burst(){const cols=['#1e88ff','#00c2ff','#7b61ff','#ffd166','#16c784'];
- for(let i=0;i<140;i++)bits.push({x:innerWidth/2,y:innerHeight/2,vx:(Math.random()-.5)*14,vy:Math.random()*-14-4,r:Math.random()*6+3,c:cols[i%cols.length],a:Math.random()*6,life:140});
- if(bits.length<=140)anim();}
-function anim(){cx.clearRect(0,0,cc.width,cc.height);
- bits.forEach(b=>{b.vy+=.35;b.x+=b.vx;b.y+=b.vy;b.a+=.2;b.life--;cx.save();cx.translate(b.x,b.y);cx.rotate(b.a);cx.fillStyle=b.c;cx.fillRect(-b.r/2,-b.r/2,b.r,b.r*1.6);cx.restore()});
- bits=bits.filter(b=>b.life>0&&b.y<cc.height+20); if(bits.length)requestAnimationFrame(anim); else cx.clearRect(0,0,cc.width,cc.height);}
 </script>
 </body>
 </html>
