@@ -1,166 +1,21 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M.A.S Abhijeet · Something new on 26 November</title>
-<meta name="description" content="Four years in, M.A.S Abhijeet is sharing something new on 26 November. Leave your email to hear about it first.">
-<meta property="og:title" content="M.A.S Abhijeet · Something new on 26 November">
-<meta property="og:description" content="Four years in. Something new on 26 November. Leave your email to hear about it first.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --sky:#DCEBFA;
-  --paper:#F4F9FF;
-  --ink:#10233F;
-  --soft:#4B6283;
-  --cobalt:#2457C5;
-  --line:#B9D0EC;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%}
-body{
-  font-family:'Figtree',system-ui,sans-serif;
-  font-size:18px;line-height:1.6;color:var(--ink);
-  background:linear-gradient(180deg,var(--sky) 0%,var(--paper) 55%);
-  min-height:100vh;
-}
-.page{max-width:760px;margin:0 auto;padding:36px 28px 32px;min-height:100vh;display:flex;flex-direction:column}
-header{display:flex;justify-content:space-between;align-items:baseline}
-.name{font-family:'Young Serif',Georgia,serif;font-size:21px;color:var(--ink);text-decoration:none}
-.place{font-size:15px;color:var(--soft)}
-main{flex:1;padding:12vh 0 64px}
-h1{font-family:'Young Serif',Georgia,serif;font-weight:400;font-size:clamp(42px,7vw,72px);line-height:1.08;letter-spacing:-.01em;max-width:13ch}
-.lede{margin-top:26px;max-width:34em;color:var(--soft);font-size:19px}
-.lede strong{color:var(--ink);font-weight:600}
-
-.clock{margin-top:56px;display:flex;align-items:flex-start;gap:clamp(10px,2.4vw,22px)}
-.seg{display:flex;flex-direction:column}
-.digits{font-family:'Young Serif',Georgia,serif;font-size:clamp(64px,13vw,132px);line-height:.95;font-variant-numeric:tabular-nums;color:var(--ink)}
-.cap{font-size:15px;color:var(--soft);margin-top:10px;padding-left:4px}
-.colon{font-family:'Young Serif',Georgia,serif;font-size:clamp(48px,10vw,100px);line-height:1.05;color:var(--line)}
-.days{display:none}
-.target{margin-top:22px;font-size:15px;color:var(--soft)}
-
-.signup{margin-top:64px;max-width:520px}
-.signup label{display:block;font-weight:500;margin-bottom:12px}
-.row{display:flex;border-bottom:2px solid var(--ink)}
-.row:focus-within{border-color:var(--cobalt)}
-input[type=email]{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:19px;color:var(--ink);padding:10px 2px;outline:0}
-input::placeholder{color:#8EA3C0}
-button{border:0;background:transparent;font:inherit;font-weight:600;color:var(--cobalt);padding:10px 2px 10px 16px;cursor:pointer}
-button:hover{color:var(--ink)}
-button:focus-visible,a:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px}
-button:disabled{color:var(--soft);cursor:wait}
-.hp{position:absolute;left:-9999px;width:1px;height:1px}
-.status{min-height:26px;margin-top:12px;font-size:16px}
-.status.ok{color:#17703F}
-.status.err{color:#B4232F}
-.fine{font-size:15px;color:var(--soft)}
-
-footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;padding-top:22px;border-top:1px solid var(--line);font-size:15px;color:var(--soft)}
-footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
-footer a:hover{border-color:var(--ink)}
-
-.reveal{opacity:0;transform:translateY(10px);animation:in .9s ease forwards}
-.reveal.d2{animation-delay:.15s}.reveal.d3{animation-delay:.3s}
-@keyframes in{to{opacity:1;transform:none}}
-@media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
-@media (max-width:520px){
-  body{font-size:17px}
-  .page{padding:24px 20px}
-  main{padding-top:8vh}
-  .clock{margin-top:44px}
-}
-</style>
-</head>
-<body>
-<div class="page">
-  <header>
-    <a class="name" href="/">M.A.S Abhijeet</a>
-    <span class="place">Abu Dhabi</span>
-  </header>
-
-  <main>
-    <h1 class="reveal" id="headline">Four years ago, I started building.</h1>
-    <p class="lede reveal d2" id="lede">To mark the fourth anniversary, I'm sharing something I've been working on quietly. It goes live on <strong>26 November</strong>. Leave your email and you'll hear about it first.</p>
-
-    <div class="clock reveal d3" role="timer" aria-live="off" aria-label="Time until the reveal">
-      <div class="seg days" id="daysSeg"><span class="digits" id="d">0</span><span class="cap">days</span></div>
-      <span class="colon days" id="daysColon">:</span>
-      <div class="seg"><span class="digits" id="h">00</span><span class="cap">hours</span></div>
-      <span class="colon">:</span>
-      <div class="seg"><span class="digits" id="m">00</span><span class="cap">minutes</span></div>
-      <span class="colon">:</span>
-      <div class="seg"><span class="digits" id="s">00</span><span class="cap">seconds</span></div>
-    </div>
-    <p class="target reveal d3">Thursday, 26 November 2026, 5:30 pm Gulf time</p>
-
-    <form class="signup reveal d3" id="signup" novalidate>
-      <label for="email">Get notified when it's live</label>
-      <div class="row">
-        <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
-        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button type="submit" id="btn">Notify me</button>
-      </div>
-      <p class="status" id="status" role="status"></p>
-      <p class="fine">One email on launch day. Nothing else.</p>
-    </form>
-  </main>
-
-  <footer>
-    <a href="mailto:info@masabhijeet.com">info@masabhijeet.com</a>
-    <span>© <span id="yr"></span> M.A.S Abhijeet</span>
-  </footer>
-</div>
-
+<meta charset="utf-8">
+<title>MAS Abhijeet</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://masabhijeet.com/">
+<!--
+  masabhijeet.com moved to Cloudflare on 25 Nov 2026. Some internet providers still have this old
+  GitHub address cached; this page forwards those visitors to the live site, keeping the page path
+  (so meeting and booking links keep working). Safe to unpublish once DNS caches have expired.
+-->
 <script>
-const SIGNUP_URL = "https://script.google.com/macros/s/AKfycbyTdgygA80SdXPjdx0D_ocZkE5jIe0-eZqnqw0B6ZnkfgZ4PO8Twl6HLRTuWZMUeIkf/exec";
-const TARGET = new Date("2026-11-26T17:30:00+04:00").getTime();
-document.getElementById('yr').textContent = new Date().getFullYear();
-
-const $ = id => document.getElementById(id);
-const pad = n => String(n).padStart(2, '0');
-let launched = false;
-function tick(){
-  const diff = Math.max(0, TARGET - Date.now());
-  const d = Math.floor(diff/864e5), h = Math.floor(diff/36e5)%24, m = Math.floor(diff/6e4)%60, s = Math.floor(diff/1e3)%60;
-  const showDays = d > 0;
-  $('daysSeg').style.display = $('daysColon').style.display = showDays ? 'flex' : 'none';
-  $('d').textContent = d; $('h').textContent = pad(h); $('m').textContent = pad(m); $('s').textContent = pad(s);
-  if (diff === 0 && !launched) {
-    launched = true;
-    $('headline').textContent = "It's live.";
-    $('lede').textContent = "Thank you for four years of support. The announcement is out today. Leave your email and I'll send you the details.";
-  }
-}
-tick(); setInterval(tick, 1000);
-
-const form = $('signup'), status = $('status'), btn = $('btn');
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  if (form.company.value) return;
-  const email = $('email').value.trim();
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    status.className = 'status err';
-    status.textContent = 'Enter a full email address, like name@example.com.';
-    return;
-  }
-  btn.disabled = true; btn.textContent = 'Saving…'; status.textContent = '';
-  try {
-    await fetch(SIGNUP_URL, {method:'POST', mode:'no-cors', body:new URLSearchParams({email, source:'masabhijeet.com coming-soon'})});
-    status.className = 'status ok';
-    status.textContent = "You're on the list. I'll email you on 26 November.";
-    form.reset();
-  } catch (err) {
-    status.className = 'status err';
-    status.textContent = "Couldn't save your email. Check your connection and try again.";
-  } finally {
-    btn.disabled = false; btn.textContent = 'Notify me';
-  }
-});
+  location.replace("https://masabhijeet.masabhijeet-web.workers.dev" + location.pathname + location.search + location.hash);
 </script>
-</body>
+<meta http-equiv="refresh" content="0; url=https://masabhijeet.masabhijeet-web.workers.dev/">
+<style>body{margin:0;display:grid;place-items:center;min-height:100vh;font-family:Georgia,serif;background:#EEF4FB;color:#10233F}a{color:#2457C5}</style>
+</head>
+<body><p>Opening <a href="https://masabhijeet.masabhijeet-web.workers.dev/">MAS Abhijeet</a>…</p></body>
 </html>
